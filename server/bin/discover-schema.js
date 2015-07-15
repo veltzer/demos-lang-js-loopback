@@ -1,13 +1,14 @@
 var path = require('path');
 var app = require(path.resolve(__dirname, '../server'));
 
-var dataSource = app.dataSources.accountDs;
+var dataSource = app.dataSources.mysqldb;
 
-dataSource.discoverSchema('Account', {schema: 'loopback-example-mysql'},
-    function(err, schema) {
-  if (err) throw err;
+dataSource.discoverSchema('TbWkWork', {},
+	function(err, schema) {
+		if (err) throw err;
+		console.log(JSON.stringify(schema, null, '  '));
+		dataSource.disconnect();
+	}
+);
 
-  console.log(JSON.stringify(schema, null, '  '));
-
-  dataSource.disconnect();
-});
+// process.exit(0);

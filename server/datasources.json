@@ -3,13 +3,13 @@
     "name": "db",
     "connector": "memory"
   },
-  "accountDs": {
-    "name": "accountDs",
+  "mysqldb": {
+    "name": "mysqldb",
     "connector": "mysql",
-    "host": "demo.strongloop.com",
+    "host": "localhost",
     "port": 3306,
-    "database": "loopback-example-mysql",
-    "username": "demo",
-    "password": "L00pBack"
+    "database": "myworld",
+    "username": "mark",
+    "password": "fVgyzpYy5N"
   }
 }

@@ -26,8 +26,8 @@
     "dataSource": "db",
     "public": false
   },
-  "Account": {
-    "dataSource": "accountDs",
-    "public": true
-  }
+	"tbwkwork": {
+		"dataSource": "mysqldb",
+		"public": true
+	}
 }

@@ -13,7 +13,7 @@ var accounts = [
     lastModifiedAt: new Date()
   }
 ];
-var dataSource = app.dataSources.accountDs;
+var dataSource = app.dataSources.mysqldb;
 
 dataSource.automigrate('Account', function(err) {
   if (err) throw err;

@@ -1,17 +1,15 @@
 var path = require('path');
 var app = require(path.resolve(__dirname, '../server'));
 
-var dataSource = app.dataSources.accountDs;
+var dataSource = app.dataSources.mysqldb;
 
-dataSource.discoverAndBuildModels('Account', {schema: 'loopback-example-mysql'},
-    function(err, models) {
-  if (err) throw err;
+console.log('in here');
+dataSource.discoverAndBuildModelsSync('TbWkWork', { schema: 'myworld' },
+	function(err, models) {
+		console.log('in here');
+		if (err) throw err;
+		console.log(models);
+	}
+);
 
-  models.Account.find(function(err, accounts) {
-    if (err) return console.log(err);
-
-    console.log(accounts);
-
-    dataSource.disconnect();
-  });
-});
+//process.exit(0);
