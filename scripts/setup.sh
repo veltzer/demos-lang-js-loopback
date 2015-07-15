@@ -4,6 +4,8 @@
 # with:
 # prefix = /home/mark/.npm-packages
 # in it...
+# to enable node(1) completions do something like this:
+# npm completion > ~/.bash_completion.d/npm
 export NPM_PACKAGES=$(path_abs ~/.npm-packages)
 export PATH=$(path_prefix ~/.npm-packages/bin "$PATH")
 export MANPATH=$(path_prefix ~/.npm-packages/share/man "$MANPATH")
